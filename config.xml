@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+# Description
+
+
+
+# Usage
+Load into WinDbg with
+```
+.settings load \path\to\this\config.xml
+```
+
+Then save the config with
+```
+.settings save
+```
+-->
+<Settings Version="1">
+    <Namespace Name="Extensions">
+        <Setting Name="ExtensionRepository" Type="VT_BSTR" Value="Implicit"></Setting>
+        <Namespace Name="ExtensionRepositories">
+        <!--
+        WinDbg JS scripts
+        -->
+        <Namespace Name="hugsy's gallery">
+            <Setting Name="Id" Type="VT_BSTR" Value="8402a3c0-36cf-4d03-bb34-1933fb4afaa0"></Setting>
+            <Setting Name="LocalCacheRootFolder" Type="VT_BSTR" Value="z:\windbg_js_scripts\Manifest"></Setting>
+            <Setting Name="IsEnabled" Type="VT_BOOL" Value="true"></Setting>
+            <Setting Name="Url" Type="VT_BSTR" Value="https://github.com/hugsy/windbg_js_scripts"></Setting>
+        </Namespace>
+    </Namespace>
+  </Namespace>
+</Settings>
