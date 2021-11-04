@@ -1,3 +1,10 @@
+///
+/// <reference path="../extra/JSProvider.d.ts" />
+///
+/// @ts-check
+///
+"use strict";
+
 /**
  *
  * Basic example to show how to document a function directly via `dx`, and create a MASM-like function alias.
@@ -19,10 +26,7 @@
  * 0:000> dx @$scriptContents.greet
  */
 
- "use strict";
-
  const log = x => host.diagnostics.debugLog(x + "\n");
- 
  
  /**
   * Be polite

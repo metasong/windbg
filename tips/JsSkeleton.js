@@ -36,7 +36,9 @@ function GetSymbolFromAddress(x){ return system(`.printf "%y", ${x.toString(16)}
 function poi(x){ return IsX64() ? u64(x) : u32(x); }
 function assert(condition) {if (!condition){throw new Error("Assertion failed"); }}
 
-
+export function test(){
+  ok('okkkkk')
+}
 /**
  *
  */

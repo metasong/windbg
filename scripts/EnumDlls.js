@@ -7,7 +7,7 @@
  * Enumerate UM modules for the currently debugged process.
  *
  * This script was made as an exercice to manipulate the JS API, you should
- * really prefer using @$curprocess.Modules
+ * really prefer using 'dx @$curprocess.Modules'
  *
  * Use as:
  * 0:000> .scriptload \path\to\EnumDlls.js

@@ -4,6 +4,8 @@
  *
  * OBSOLETE: Use ObjectExplorer.js
  */
+/// <reference path="../extra/JSProvider.d.ts" />
+
 "use strict";
 
 var log = x => host.diagnostics.debugLog(x + "\n");
