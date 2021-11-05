@@ -157,6 +157,7 @@ Termination on corruption : ENABLED
 run PrestoGateway then run:
  .\gflags.exe /i Slb.Planck.Core.PrestoGateway.Service.exe +ust
 create dump to analysis:
+sl C:\Program Files\Windows Kits\10\Debuggers\x64
 robocopy \\tsclient\M\Script\windbg\scripts\ . presto-gateway-mem-leak-auto-analysis.js
 .scriptrun presto-gateway-mem-leak-auto-analysis.js
 
