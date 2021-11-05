@@ -93,8 +93,9 @@ Termination on corruption : ENABLED
   const size = 50;
   const used = [];
   const dic = {}
-  const len = Math.min(size, validLines.length)
-  println(`${len}/${size} items to analysis......`)
+  const all = validLines.length;
+  const len = Math.min(size, all)
+  println(`${len}/${all} items to analysis......`)
   for (let i = 0; i < len; i++) {
     let index = NaN
     do {
@@ -144,8 +145,8 @@ Termination on corruption : ENABLED
     println(`[${l}/${len}: ${(l / len).toFixed(3)}]: ${key.join(',')}`)
   }
   )
-  if(len === size){
-    println(`items:${len} randomly chosen from ${size}.`);
+  if(len !== all){
+    println(`items:${len} randomly chosen from ${all}.`);
   } else {
     println(`items: ${len}.`)
   }
@@ -153,7 +154,7 @@ Termination on corruption : ENABLED
 }
 
 /*
-robocopy \\tsclient\M\Script\windbg\scripts\ . mem-leak-auto-analysis.js
-.scriptrun mem-leak-auto-analysis.js
+robocopy \\tsclient\M\Script\windbg\scripts\ . presto-gateway-mem-leak-auto-analysis.js
+.scriptrun presto-gateway-mem-leak-auto-analysis.js
 
 */
