@@ -26,7 +26,7 @@ function getCallStackAsString()
     return ret;
 }
 
-function runCommand(command)
+function run(command)
 {
     var ret = "";
     displayMessage("Executing : " + command + "\n");
@@ -49,7 +49,7 @@ function getCurrentFunctionName()
 
 function getFirstArgument()
 {
-    var ret = runCommand(".printf \"%d\", dwo(esp+4)");
+    var ret = run(".printf \"%d\", dwo(esp+4)");
     return ret;
 }
 
