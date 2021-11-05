@@ -140,9 +140,9 @@ Termination on corruption : ENABLED
     return a[1].length - b[1].length
   })
   result.forEach(([value, key]) => {
-    println(value);
     const l = key.length;
     println(`[${l}/${len}: ${(l / len).toFixed(3)}]: ${key.join(',')}`)
+    println(value);
   }
   )
   if(len !== all){
@@ -154,6 +154,9 @@ Termination on corruption : ENABLED
 }
 
 /*
+run PrestoGateway then run:
+ .\gflags.exe /i Slb.Planck.Core.PrestoGateway.Service.exe +ust
+create dump to analysis:
 robocopy \\tsclient\M\Script\windbg\scripts\ . presto-gateway-mem-leak-auto-analysis.js
 .scriptrun presto-gateway-mem-leak-auto-analysis.js
 
