@@ -94,6 +94,7 @@ Termination on corruption : ENABLED
   const used = [];
   const dic = {}
   const len = Math.min(size, validLines.length)
+  println(`${len}/${size} items to analysis......`)
   for (let i = 0; i < len; i++) {
     let index = NaN
     do {
@@ -133,19 +134,21 @@ Termination on corruption : ENABLED
     if (!v) dic[key] = []
     dic[key].push(userPtr)
   }
-  const result = [];
-  for (const entity of Object.entries(dic)) {
-    result.push(entity)
-
-  }
-  result.sort((a,b)=> {
-    a[1].length < b[1].length
-  }).forEach(([value, key])=> {
-     println(value);
+  const result =Object.entries(dic);
+  result.sort((a, b) => {
+    return a[1].length - b[1].length
+  })
+  result.forEach(([value, key]) => {
+    println(value);
     const l = key.length;
-    println(`[${l}: ${l / len}]: ${key.join(',')}`)
+    println(`[${l}/${len}: ${(l / len).toFixed(3)}]: ${key.join(',')}`)
   }
   )
+  if(len === size){
+    println(`items:${len} randomly chosen from ${size}.`);
+  } else {
+    println(`items: ${len}.`)
+  }
 
 }
 
