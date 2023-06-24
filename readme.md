@@ -3,17 +3,12 @@
 
 ## Install as a WinDbg gallery
 
- - Clone the repository
-```
-C:> git clone https://github.com/hugsy/windbg_js_scripts
-```
-
- - In `windbg_js_scripts\config.xml`, edit the lines `Setting Name="LocalCacheRootFolder"` to reflect the local path of the repository.
+ - In `config.xml`, edit the lines `Setting Name="LocalCacheRootFolder"` to reflect the local path of the repository.
 
  - In WinDbg, load the `config.xml` file and save the settings:
 ```
-0:000> .settings load \path\to\windbg_js_scripts\config.xml
-[...]\windbg_js_scripts\config.xml has been loaded successfully.
+0:000> .settings load \path\to\config.xml
+[...]config.xml has been loaded successfully.
 0:000> .settings save
 Settings have been saved.
 ```
